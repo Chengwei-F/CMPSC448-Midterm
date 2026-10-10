@@ -1,0 +1,83 @@
+{
+  "signature": "dc1e270c879524c5e70b925ad93265f6e01d04a17618b3026ae605e794328236",
+  "engine_version": "1.0.0",
+  "code_sha256": "4ae6a7f4a22eea56a7c952b258008ae5ef0f5d442270eb79c71f921d93ba88d5",
+  "config": {
+    "label_names": [
+      "GPT",
+      "Claude",
+      "Gemini",
+      "Qwen",
+      "DeepSeek"
+    ],
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "extra_seeds": [
+      42
+    ],
+    "vocabulary_size": 30000,
+    "embedding_dim": 128,
+    "cnn_filters": 128,
+    "cnn_kernels": [
+      3,
+      4,
+      5
+    ],
+    "lstm_hidden": 128,
+    "dropout": 0.3,
+    "batch_size": 64,
+    "epochs": 15,
+    "patience": 3,
+    "learning_rate": 0.001,
+    "input_max_tokens": 256,
+    "output_max_tokens": 512,
+    "gradient_clip": 1.0,
+    "device": "auto",
+    "num_workers": 0,
+    "threads": 4,
+    "deterministic": true,
+    "bootstrap_reps": 500,
+    "bootstrap_seed": 20261005,
+    "rq3_domains": [
+      "coding",
+      "factual_qa"
+    ],
+    "length_candidates": [
+      32,
+      64,
+      128,
+      256
+    ],
+    "length_min_train_retention": 0.3,
+    "length_min_train_prompts": 100,
+    "data_seed": 20261005,
+    "profile": "full"
+  },
+  "architecture": "cnn",
+  "mode": "output_only",
+  "seed": 42,
+  "transform": "none",
+  "length_k": null,
+  "data_sha256": {
+    "train": "34cf32fd2bdca3f05dc4a6b9b6d19624d9f4a143b82afc4a631af531b258f7cb",
+    "validation": "c601eb07575ecbde02290d4e6d7b872fe75fa15c7da3a27affed762c01814024",
+    "test": "4214875ff516923bac7107187c587e3339bf72422d893b91b66571281403665b"
+  },
+  "label_names": [
+    "GPT",
+    "Claude",
+    "Gemini",
+    "Qwen",
+    "DeepSeek"
+  ],
+  "device": "cpu",
+  "versions": {
+    "torch": "2.14.1+cpu",
+    "numpy": "2.5.3",
+    "pandas": "2.3.3",
+    "sklearn": "1.9.1"
+  }
+}

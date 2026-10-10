@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "splits": {
+    "train": {
+      "rows": 40295,
+      "prompts": 8059,
+      "groups": 8007,
+      "per_label": {
+        "0": 8059,
+        "1": 8059,
+        "2": 8059,
+        "3": 8059,
+        "4": 8059
+      }
+    },
+    "validation": {
+      "rows": 8635,
+      "prompts": 1727,
+      "groups": 1727,
+      "per_label": {
+        "0": 1727,
+        "1": 1727,
+        "2": 1727,
+        "3": 1727,
+        "4": 1727
+      }
+    },
+    "test": {
+      "rows": 8635,
+      "prompts": 1727,
+      "groups": 1727,
+      "per_label": {
+        "0": 1727,
+        "1": 1727,
+        "2": 1727,
+        "3": 1727,
+        "4": 1727
+      }
+    }
+  },
+  "label_mapping": {
+    "0": {
+      "LLM_name": [
+        "GPT"
+      ],
+      "model_id": [
+        "gpt-5-chat"
+      ]
+    },
+    "1": {
+      "LLM_name": [
+        "Claude"
+      ],
+      "model_id": [
+        "claude-sonnet-4"
+      ]
+    },
+    "2": {
+      "LLM_name": [
+        "Gemini"
+      ],
+      "model_id": [
+        "gemini-2.5-flash"
+      ]
+    },
+    "3": {
+      "LLM_name": [
+        "Qwen"
+      ],
+      "model_id": [
+        "qwen3-235b-a22b-2507"
+      ]
+    },
+    "4": {
+      "LLM_name": [
+        "DeepSeek"
+      ],
+      "model_id": [
+        "deepseek-v3-0324"
+      ]
+    }
+  },
+  "errors": [],
+  "near_duplicate_scope": "Checks the supplied group_id assignments and normalized exact input equality; does not newly detect every semantic paraphrase."
+}

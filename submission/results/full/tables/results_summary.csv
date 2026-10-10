@@ -1,0 +1,16 @@
+﻿rq,architecture,mode,condition,target,accuracy_mean,accuracy_std,accuracy_count,macro_f1_mean,macro_f1_std,macro_f1_count
+main,bilstm,input_and_output,input_and_output,,0.8476741941710095,0.005380181379952285,3,0.8477027501375201,0.0048348410202958166,3
+main,bilstm,input_only,input_only,,0.2,,1,0.15243882162602432,,1
+main,bilstm,output_only,output_only,,0.8566685967959854,0.004255574053722399,3,0.8570513238619752,0.003883718381025065,3
+main,cnn,input_and_output,input_and_output,,0.8649681528662421,0.0015580340529326596,3,0.864841189307128,0.0012914111442214036,3
+main,cnn,input_only,input_only,,0.2,,1,0.18324583201176808,,1
+main,cnn,output_only,output_only,,0.8670912951167727,0.005056349428090343,3,0.8667174535578241,0.004943136966099624,3
+rq3,cnn,output_only,matched_mixed,coding,0.8757575757575757,,1,0.8768663620701982,,1
+rq3,cnn,output_only,matched_mixed,factual_qa,0.7564142194744977,,1,0.758001219669081,,1
+rq3,cnn,output_only,target_heldout,coding,0.5767676767676768,,1,0.5186572031373078,,1
+rq3,cnn,output_only,target_heldout,factual_qa,0.37712519319938176,,1,0.35993973525283274,,1
+rq4,cnn,output_only,fixed_token_length,K=256,0.9514204545454545,,1,0.9514199793150129,,1
+rq4,cnn,output_only,keyword_mask,,0.8680949623624783,,1,0.8686422258602304,,1
+rq4,cnn,output_only,length_subset_raw,K=256,0.9605113636363637,,1,0.9605498232201797,,1
+rq4,cnn,output_only,no_format,,0.827446438911407,,1,0.8282976173520984,,1
+rq4,feature_logistic,output_features,fixed_interpretable_features,,0.5257672264041691,,1,0.5247237725272197,,1

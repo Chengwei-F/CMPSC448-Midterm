@@ -1,0 +1,34 @@
+QUALITATIVE ERROR CASES — FULL TEST RESULTS
+
+Run: main_cnn_output_only_s42
+Prediction file: results/full/runs/main_cnn_output_only_s42/test_predictions.csv
+Text join: prepared/test.csv by record_id; SHA256 3f4fec288c3bfee985623b9f17516fc64f1c15f1036ff905a080452976357bd0
+Post hoc purposive qualitative illustrations after evaluation; no test filtering, new model selection, or retraining.
+Quoted text is a stored model response; its factual correctness is not independently verified or asserted.
+Maximum softmax scores are uncalibrated classifier outputs, not established probabilities of real-world authorship.
+
+Exact same-prompt complete-answer equality: 33 answer groups, 69 responses, 32 prompts. These are legitimate responses from different generators, not duplicate record IDs. No normalized/approximate or prefix matches are included.
+
+CASE 1: identical_answers_different_generators
+Prompt ID: 0e8ac9dfadc8d25d0be8512bbf2aac182097228dd0e30fecf33e1dad12d871ce
+Group ID: 558bee10ef09ff880fa93977803fcfd6a5976b09b566c69dbe9205e717d5325d
+Domain/benchmark: factual_qa / simpleqa
+Prompt: What year was the municipality of Cáceres, Antioquia, Colombia, founded?
+Stored response: The municipality of Cáceres, Antioquia, Colombia, was founded in **1576**.
+Record ID: 3d0a57bf6713bb099ca5943ff5e44baf4333cdaaf9fa7bf04f0ec73b8ce96b71
+True label: Gemini; prediction: Gemini; correct: True; maximum softmax: 0.7852434
+Record ID: f3c019578cb0881000e5da3edf1782198d17f6bce3fd8989f03395b562d4654b
+True label: Qwen; prediction: Gemini; correct: False; maximum softmax: 0.7852434
+Selection: Selected post hoc to illustrate exact answer equality across generator labels within the same prompt; not a random or representative sample.
+Interpretation: Identical prompts and answers cannot both be attributed correctly to different labels by a deterministic text-only classifier. These are legitimate cross-model records, not duplicate data rows to delete.
+
+CASE 2: high_softmax_wrong_attribution
+Prompt ID: c3756b910d0cdc6457de2190a10ea830b5ba6b932d9aff53f1641b634a52ee58
+Group ID: 59961e06187f3de5b53ebf9941932403e0f13df95b83d2c8c7169dba84f96d84
+Domain/benchmark: factual_qa / simpleqa
+Prompt: In which Paris cemetery is Jacob Abraham Camille Pissarro’s youngest son buried?
+Stored response: Jacob Abraham Camille Pissarro’s youngest son, **Paul-Émile Pissarro**, is buried in the **Père Lachaise Cemetery** in Paris.
+Record ID: 6928fc778f444d3837423b314f16ae0ee5df32bb6cd14693d52b58d831e85aa4
+True label: Qwen; prediction: GPT; correct: False; maximum softmax: 0.99486035
+Selection: Selected post hoc from erroneous seed-42 CNN output-only predictions with at most 30 response whitespace words and maximum softmax greater than 0.99; illustrative, not a population calibration estimate.
+Interpretation: High softmax does not guarantee correct attribution. The question concerns Camille Pissarro’s youngest son, named Paul-Émile Pissarro in the stored answer, not Camille Pissarro himself.

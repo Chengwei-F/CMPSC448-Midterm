@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "source_run": "main_cnn_output_only_s42",
+  "architecture": "cnn",
+  "input_condition": "output_only",
+  "seed": 42,
+  "prediction_file": "results/full/runs/main_cnn_output_only_s42/test_predictions.csv",
+  "text_source": "prepared/test.csv (not bundled; recover and verify with saved hash)",
+  "join_rule": "One-to-one by record_id; source LLM_name equals saved true_label.",
+  "prepared_test_sha256": "3f4fec288c3bfee985623b9f17516fc64f1c15f1036ff905a080452976357bd0",
+  "probability_column_labels": {
+    "prob_0": "GPT",
+    "prob_1": "Claude",
+    "prob_2": "Gemini",
+    "prob_3": "Qwen",
+    "prob_4": "DeepSeek"
+  },
+  "selection_scope": "Post hoc purposive qualitative illustrations after evaluation; no test filtering, new model selection, or retraining.",
+  "quote_caveat": "Quoted text is a stored model response; its factual correctness is not independently verified or asserted.",
+  "score_caveat": "Maximum softmax scores are uncalibrated classifier outputs, not established probabilities of real-world authorship.",
+  "exact_same_prompt_answer_summary": {
+    "method": "Group the 8,635 original test rows by exact (prompt_id, LLM_output), without normalization or truncation; retain groups with more than one record.",
+    "answer_groups": 33,
+    "records_in_groups": 69,
+    "distinct_prompts": 32,
+    "additional_records_beyond_one_per_answer_group": 36,
+    "caveat": "Legitimate cross-model answer equality, not duplicated record IDs. Approximate matches and token-prefix collisions are not counted."
+  },
+  "cases": [
+    {
+      "case_id": "identical_answers_different_generators",
+      "selection_method": "Selected post hoc to illustrate exact answer equality across generator labels within the same prompt; not a random or representative sample.",
+      "prompt_id": "0e8ac9dfadc8d25d0be8512bbf2aac182097228dd0e30fecf33e1dad12d871ce",
+      "group_id": "558bee10ef09ff880fa93977803fcfd6a5976b09b566c69dbe9205e717d5325d",
+      "task_domain": "factual_qa",
+      "benchmark": "simpleqa",
+      "prompt": "What year was the municipality of Cáceres, Antioquia, Colombia, founded?",
+      "brief_response_quote": "The municipality of Cáceres, Antioquia, Colombia, was founded in **1576**.",
+      "quote_is_full_response": true,
+      "identical_raw_response_for_all_listed_records": true,
+      "records": [
+        {
+          "record_id": "3d0a57bf6713bb099ca5943ff5e44baf4333cdaaf9fa7bf04f0ec73b8ce96b71",
+          "true_label": "Gemini",
+          "predicted_label": "Gemini",
+          "correct": true,
+          "maximum_softmax": 0.7852434,
+          "maximum_softmax_csv_value": "0.7852434",
+          "softmax_columns": {
+            "prob_0": 0.0149712255,
+            "prob_1": 0.008823316,
+            "prob_2": 0.7852434,
+            "prob_3": 0.18015528,
+            "prob_4": 0.010806775
+          }
+        },
+        {
+          "record_id": "f3c019578cb0881000e5da3edf1782198d17f6bce3fd8989f03395b562d4654b",
+          "true_label": "Qwen",
+          "predicted_label": "Gemini",
+          "correct": false,
+          "maximum_softmax": 0.7852434,
+          "maximum_softmax_csv_value": "0.7852434",
+          "softmax_columns": {
+            "prob_0": 0.0149712255,
+            "prob_1": 0.008823316,
+            "prob_2": 0.7852434,
+            "prob_3": 0.18015528,
+            "prob_4": 0.010806775
+          }
+        }
+      ],
+      "interpretation": "Identical prompts and answers cannot both be attributed correctly to different labels by a deterministic text-only classifier. These are legitimate cross-model records, not duplicate data rows to delete."
+    },
+    {
+      "case_id": "high_softmax_wrong_attribution",
+      "selection_method": "Selected post hoc from erroneous seed-42 CNN output-only predictions with at most 30 response whitespace words and maximum softmax greater than 0.99; illustrative, not a population calibration estimate.",
+      "prompt_id": "c3756b910d0cdc6457de2190a10ea830b5ba6b932d9aff53f1641b634a52ee58",
+      "group_id": "59961e06187f3de5b53ebf9941932403e0f13df95b83d2c8c7169dba84f96d84",
+      "task_domain": "factual_qa",
+      "benchmark": "simpleqa",
+      "prompt": "In which Paris cemetery is Jacob Abraham Camille Pissarro’s youngest son buried?",
+      "brief_response_quote": "Jacob Abraham Camille Pissarro’s youngest son, **Paul-Émile Pissarro**, is buried in the **Père Lachaise Cemetery** in Paris.",
+      "quote_is_full_response": true,
+      "identical_raw_response_for_all_listed_records": true,
+      "records": [
+        {
+          "record_id": "6928fc778f444d3837423b314f16ae0ee5df32bb6cd14693d52b58d831e85aa4",
+          "true_label": "Qwen",
+          "predicted_label": "GPT",
+          "correct": false,
+          "maximum_softmax": 0.99486035,
+          "maximum_softmax_csv_value": "0.99486035",
+          "softmax_columns": {
+            "prob_0": 0.99486035,
+            "prob_1": 9.486614e-09,
+            "prob_2": 0.00012647173,
+            "prob_3": 0.004701983,
+            "prob_4": 0.00031117696
+          }
+        }
+      ],
+      "interpretation": "High softmax does not guarantee correct attribution. The question concerns Camille Pissarro’s youngest son, named Paul-Émile Pissarro in the stored answer, not Camille Pissarro himself."
+    }
+  ]
+}

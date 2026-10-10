@@ -1,0 +1,11 @@
+{
+  "target_domain": "coding",
+  "seed": 42,
+  "ood_train_prompts": 7140,
+  "mixed_train_prompts": 7140,
+  "mixed_target_prompts": 797,
+  "common_validation_prompts": 1540,
+  "target_test_prompts": 198,
+  "validation_rule": "same non-target connected groups in both conditions",
+  "vocabulary_rule": "fitted separately using each permitted training set only"
+}

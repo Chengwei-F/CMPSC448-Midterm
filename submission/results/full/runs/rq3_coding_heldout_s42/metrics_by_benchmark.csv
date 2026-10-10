@@ -1,0 +1,3 @@
+﻿benchmark,n,accuracy,macro_f1
+arenahard,200,0.66,0.650660630123965
+livecodebench,790,0.5556962025316455,0.44297619530578664

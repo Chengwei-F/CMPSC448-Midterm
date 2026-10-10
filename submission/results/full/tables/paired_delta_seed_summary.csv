@@ -1,0 +1,8 @@
+﻿rq,architecture,mode,condition,target,accuracy_delta_mean,accuracy_delta_std,accuracy_delta_count,macro_f1_delta_mean,macro_f1_delta_std,macro_f1_delta_count
+main,bilstm,input_and_output,input_and_output,,-0.008994402624975861,0.0014890794458201771,3,-0.009348573724455115,0.001461436141462609,3
+main,cnn,input_and_output,input_and_output,,-0.002123142250530785,0.0037028312366323033,3,-0.0018762642506959433,0.003866203587468404,3
+rq3,cnn,output_only,target_heldout,coding,-0.2989898989898989,,1,-0.3582091589328904,,1
+rq3,cnn,output_only,target_heldout,factual_qa,-0.37928902627511596,,1,-0.3980614844162481,,1
+rq4,cnn,output_only,fixed_token_length,K=256,-0.00909090909090915,,1,-0.00912984390516669,,1
+rq4,cnn,output_only,keyword_mask,,0.0030110017371164366,,1,0.0034460826410320777,,1
+rq4,cnn,output_only,no_format,,-0.03763752171395485,,1,-0.03689852586709996,,1

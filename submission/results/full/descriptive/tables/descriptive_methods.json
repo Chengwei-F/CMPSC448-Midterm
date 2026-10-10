@@ -1,0 +1,8 @@
+{
+  "descriptive_split": "train",
+  "ttr_window": "first 128 whitespace words; punctuation-stripped lowercase types",
+  "paired_ttr_prompt_count": 3622,
+  "paired_ttr_rule": "all model responses have at least 128 whitespace words",
+  "sentence_rule": ". ! or ? followed by whitespace/end; approximate, particularly for code/math",
+  "feature_interpretation": "Associations under this dataset's generation settings; not causal effects or universal model signatures."
+}

@@ -1,0 +1,169 @@
+{
+  "all_passed": true,
+  "verified_runs": 23,
+  "verification": "Accuracy/Macro-F1 recomputed from saved test predictions; complete prompt groups, probability validity, row counts and input-only controls checked",
+  "training_recomputed": false,
+  "runs": [
+    {
+      "run_id": "main_cnn_input_only_s42",
+      "n_test": 8635,
+      "accuracy": 0.2,
+      "macro_f1": 0.18324583201176808,
+      "verified": true
+    },
+    {
+      "run_id": "main_cnn_output_only_s42",
+      "n_test": 8635,
+      "accuracy": 0.8650839606253619,
+      "macro_f1": 0.8651961432191984,
+      "verified": true
+    },
+    {
+      "run_id": "main_cnn_output_only_s43",
+      "n_test": 8635,
+      "accuracy": 0.8728430804863926,
+      "macro_f1": 0.8722424359835095,
+      "verified": true
+    },
+    {
+      "run_id": "main_cnn_output_only_s44",
+      "n_test": 8635,
+      "accuracy": 0.863346844238564,
+      "macro_f1": 0.8627137814707646,
+      "verified": true
+    },
+    {
+      "run_id": "main_cnn_input_and_output_s42",
+      "n_test": 8635,
+      "accuracy": 0.8636942675159236,
+      "macro_f1": 0.86379477935322,
+      "verified": true
+    },
+    {
+      "run_id": "main_cnn_input_and_output_s43",
+      "n_test": 8635,
+      "accuracy": 0.8667052692530399,
+      "macro_f1": 0.8662844553688428,
+      "verified": true
+    },
+    {
+      "run_id": "main_cnn_input_and_output_s44",
+      "n_test": 8635,
+      "accuracy": 0.8645049218297626,
+      "macro_f1": 0.8644443331993218,
+      "verified": true
+    },
+    {
+      "run_id": "main_bilstm_input_only_s42",
+      "n_test": 8635,
+      "accuracy": 0.2,
+      "macro_f1": 0.15243882162602432,
+      "verified": true
+    },
+    {
+      "run_id": "main_bilstm_output_only_s42",
+      "n_test": 8635,
+      "accuracy": 0.8517660683265779,
+      "macro_f1": 0.8525697991079827,
+      "verified": true
+    },
+    {
+      "run_id": "main_bilstm_output_only_s43",
+      "n_test": 8635,
+      "accuracy": 0.8594093804284887,
+      "macro_f1": 0.8591498878823476,
+      "verified": true
+    },
+    {
+      "run_id": "main_bilstm_output_only_s44",
+      "n_test": 8635,
+      "accuracy": 0.8588303416328894,
+      "macro_f1": 0.8594342845955953,
+      "verified": true
+    },
+    {
+      "run_id": "main_bilstm_input_and_output_s42",
+      "n_test": 8635,
+      "accuracy": 0.84169079328315,
+      "macro_f1": 0.8422546905185231,
+      "verified": true
+    },
+    {
+      "run_id": "main_bilstm_input_and_output_s43",
+      "n_test": 8635,
+      "accuracy": 0.8521134916039375,
+      "macro_f1": 0.8514825604556593,
+      "verified": true
+    },
+    {
+      "run_id": "main_bilstm_input_and_output_s44",
+      "n_test": 8635,
+      "accuracy": 0.8492182976259409,
+      "macro_f1": 0.849370999438378,
+      "verified": true
+    },
+    {
+      "run_id": "rq3_coding_mixed_s42",
+      "n_test": 990,
+      "accuracy": 0.8757575757575757,
+      "macro_f1": 0.8768663620701982,
+      "verified": true
+    },
+    {
+      "run_id": "rq3_coding_heldout_s42",
+      "n_test": 990,
+      "accuracy": 0.5767676767676768,
+      "macro_f1": 0.5186572031373078,
+      "verified": true
+    },
+    {
+      "run_id": "rq3_factual_qa_mixed_s42",
+      "n_test": 3235,
+      "accuracy": 0.7564142194744977,
+      "macro_f1": 0.758001219669081,
+      "verified": true
+    },
+    {
+      "run_id": "rq3_factual_qa_heldout_s42",
+      "n_test": 3235,
+      "accuracy": 0.37712519319938176,
+      "macro_f1": 0.35993973525283274,
+      "verified": true
+    },
+    {
+      "run_id": "rq4_no_format_s42",
+      "n_test": 8635,
+      "accuracy": 0.827446438911407,
+      "macro_f1": 0.8282976173520984,
+      "verified": true
+    },
+    {
+      "run_id": "rq4_keyword_mask_s42",
+      "n_test": 8635,
+      "accuracy": 0.8680949623624783,
+      "macro_f1": 0.8686422258602304,
+      "verified": true
+    },
+    {
+      "run_id": "rq4_length_raw_s42",
+      "n_test": 3520,
+      "accuracy": 0.9605113636363637,
+      "macro_f1": 0.9605498232201797,
+      "verified": true
+    },
+    {
+      "run_id": "rq4_fixed_length_s42",
+      "n_test": 3520,
+      "accuracy": 0.9514204545454545,
+      "macro_f1": 0.951419979315013,
+      "verified": true
+    },
+    {
+      "run_id": "rq4_features",
+      "n_test": 8635,
+      "accuracy": 0.5257672264041691,
+      "macro_f1": 0.5247237725272197,
+      "verified": true
+    }
+  ]
+}

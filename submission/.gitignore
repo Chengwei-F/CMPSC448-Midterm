@@ -1,0 +1,37 @@
+# Local Python environments and caches
+.venv/
+.venv-data/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# External text datasets and source archives
+/raw/
+/prepared/
+/prepared_rebuilt/
+/reproduced/
+*.tar
+*.tar.gz
+*.zip
+
+# Locally fitted binaries; saved CSV metrics and predictions remain tracked
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.joblib
+
+# Keep original full-run evidence; ignore fresh reproduction outputs
+/results/reproduction*/
+/results/smoke/
+/results/full/report_draft.html
+/results/full/results_summary.pdf
+
+# Editor/OS noise and credentials
+.DS_Store
+Thumbs.db
+.env
+
+# Optional authored report rebuild output
+/report_build/

@@ -1,0 +1,43 @@
+﻿CMPSC448 Midterm 提交包使用说明
+
+一、现在已经完成什么
+23组正式结果齐全；逐条预测重算的Accuracy和Macro-F1与汇总一致。报告已完成数据、CNN/BiLSTM、训练与验证、四个研究问题、误判案例、局限、经验、参考文献。
+报告共13页。无需为了写报告再次训练。
+
+二、你现在按这几步做
+1. 把整个ZIP解压到一个新文件夹，不要覆盖原始midterm实验目录。
+2. 打开report.docx。首页的[Enter your full name before submission]换成你的英文全名；README.md里的姓名也要填写。
+3. 逐段阅读报告，确认你能解释方法、结果以及AI辅助说明。这个版本已经写了研究结论，不是只有图表的自动模板。
+4. 在Word中将修改后的文档导出为PDF，文件名使用report.pdf，替换本包中的同名PDF。重新打开PDF确认姓名和分页正确。
+5. 将本文件夹的内容上传到你的GitHub repository，保留根目录的README.md和report.pdf，以及代码和results等子目录。
+6. 确认老师能访问repository并能打开report.pdf；最后在课程提交入口交GitHub repository URL。课程要求的交付是包含代码与PDF报告的仓库链接。
+
+如果把英文姓名发回给我，我可以替你补齐报告与README，再生成最终PDF；不要保留姓名占位符直接提交。
+
+三、文件分别有什么用
+report.pdf：老师阅读的报告，目前只差姓名与本人审阅确认。
+report.docx：可编辑报告。
+README.md：英文项目介绍和运行说明。
+DATA.md：数据来源、固定版本、下载、重建和hash核对方法。
+run_project.py、attribution/：真正用于训练、评估和分析的代码。
+results/full/tables/：汇总指标和配对实验差异。
+results/full/runs/：每次实验的指标、训练历史、混淆矩阵和逐条预测。
+results/full/rq4_features/：可解释特征基线结果。
+report_assets/：报告图及补充图。
+evidence/：独立核验结果和有完整记录ID的误判案例。
+verify_saved_results.py：不用训练也能重算23组Accuracy和Macro-F1。
+
+四、关于你电脑上的原文件
+原始prepared文件夹、.pt模型权重和本机环境都请继续保留。
+这个提交包为了便于仓库上传，不重复打包大型原始数据、prepared文本、训练权重、词表或环境。
+老师可直接查看所有结果；完整重现训练需要按DATA.md重新获取数据。
+不要误把旧的自动report_draft.html或results_summary.pdf当成这里完成的正文报告。
+不要为了生成最终PDF再执行--stage all；那是训练流程。你现在只需要补姓名、审阅并导出PDF。
+
+五、四个研究问题的结论提要
+RQ1：只看回答可以较好识别这五个具体模型；CNN平均准确率86.71%，BiLSTM85.67%。
+RQ2：只看题目必然是20%准确率，因为同题对应五个标签。拼接题目没有稳定改善CNN，并降低本次BiLSTM表现。
+RQ3：跨任务泛化明显下降。coding Macro-F1从0.8769降到0.5187，factual QA从0.7580降到0.3599。
+RQ4：格式提供一定信息；遮盖所选模型名称没有可检测的损失；固定长度子集仍能分类，但这个子集不能与全测试集直接比高低。
+
+注意：这次最终实验实际使用LLMRouterBench，不是最早讨论的RAID。

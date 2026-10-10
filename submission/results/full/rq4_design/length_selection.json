@@ -1,0 +1,47 @@
+{
+  "selection_uses": "training text lengths only",
+  "unit": "actual tokenizer tokens",
+  "candidates": [
+    {
+      "k_tokens": 32,
+      "training_prompts": 5748,
+      "training_retention": 0.713239856061546
+    },
+    {
+      "k_tokens": 64,
+      "training_prompts": 5157,
+      "training_retention": 0.6399056954957191
+    },
+    {
+      "k_tokens": 128,
+      "training_prompts": 4550,
+      "training_retention": 0.5645861769450304
+    },
+    {
+      "k_tokens": 256,
+      "training_prompts": 3281,
+      "training_retention": 0.40712247177069116
+    }
+  ],
+  "chosen_k": 256,
+  "retention": {
+    "train": {
+      "rows": 16405,
+      "prompts": 3281,
+      "fraction": 0.40712247177069116
+    },
+    "validation": {
+      "rows": 3300,
+      "prompts": 660,
+      "fraction": 0.3821656050955414
+    },
+    "test": {
+      "rows": 3520,
+      "prompts": 704,
+      "fraction": 0.40764331210191085
+    }
+  },
+  "eligibility": "every answer in each retained connected group has at least K tokens",
+  "comparison": "same records and splits: original up-to-512-token prefix vs exact first K tokens",
+  "limitation": "conditional on long-enough answers; cannot generalize its result to all short answers"
+}

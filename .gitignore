@@ -1,0 +1,34 @@
+# Local Python environments, caches, and editor files (at any depth)
+.venv/
+.venv-data/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.vscode/
+.DS_Store
+Thumbs.db
+.env
+
+# External data and download archives; keep derived saved results
+raw/
+prepared/
+prepared_rebuilt/
+reproduced/
+*.tar
+*.tar.gz
+*.zip
+
+# Fitted binary models
+*.pt
+*.pth
+*.ckpt
+*.pkl
+*.joblib
+
+# New local experiments; original Submission/results/full remains tracked
+/Submission/results/reproduction*/
+/Submission/results/smoke/
+/Submission/results/full/report_draft.html
+/Submission/results/full/results_summary.pdf
+/Submission/report_build/

@@ -1,0 +1,54 @@
+{
+  "label_names": [
+    "GPT",
+    "Claude",
+    "Gemini",
+    "Qwen",
+    "DeepSeek"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "extra_seeds": [
+    42
+  ],
+  "vocabulary_size": 30000,
+  "embedding_dim": 128,
+  "cnn_filters": 128,
+  "cnn_kernels": [
+    3,
+    4,
+    5
+  ],
+  "lstm_hidden": 128,
+  "dropout": 0.3,
+  "batch_size": 64,
+  "epochs": 15,
+  "patience": 3,
+  "learning_rate": 0.001,
+  "input_max_tokens": 256,
+  "output_max_tokens": 512,
+  "gradient_clip": 1.0,
+  "device": "auto",
+  "num_workers": 0,
+  "threads": 4,
+  "deterministic": true,
+  "bootstrap_reps": 500,
+  "bootstrap_seed": 20261005,
+  "rq3_domains": [
+    "coding",
+    "factual_qa"
+  ],
+  "length_candidates": [
+    32,
+    64,
+    128,
+    256
+  ],
+  "length_min_train_retention": 0.3,
+  "length_min_train_prompts": 100,
+  "data_seed": 20261005,
+  "profile": "full"
+}

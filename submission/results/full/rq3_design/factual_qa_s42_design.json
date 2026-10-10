@@ -1,0 +1,11 @@
+{
+  "target_domain": "factual_qa",
+  "seed": 42,
+  "ood_train_prompts": 5041,
+  "mixed_train_prompts": 5041,
+  "mixed_target_prompts": 1887,
+  "common_validation_prompts": 1080,
+  "target_test_prompts": 647,
+  "validation_rule": "same non-target connected groups in both conditions",
+  "vocabulary_rule": "fitted separately using each permitted training set only"
+}

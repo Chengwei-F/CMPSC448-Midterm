@@ -1,0 +1,144 @@
+{
+  "source_file_sha256": "d5757433fef6410c001044537e9b7e8bc309f383b0af4e33ca73b70954b47761",
+  "source_matches_saved_training_hash": true,
+  "split": "train",
+  "rows": [
+    {
+      "LLM_name": "Qwen",
+      "n_answers": 8059,
+      "gt_512_tokens": 2964,
+      "gt_512_fraction": 0.3677875666956198,
+      "prefix_keyword_match_answers": 26,
+      "prefix_keyword_match_fraction": 0.0032262067254001736,
+      "prefix_keyword_occurrences": 55,
+      "matched_terms_examples": [
+        "Google",
+        "google",
+        "Claude",
+        "ChatGPT",
+        "OpenAI",
+        "GPT-4-Turbo",
+        "Gemini",
+        "Alibaba"
+      ]
+    },
+    {
+      "LLM_name": "Gemini",
+      "n_answers": 8059,
+      "gt_512_tokens": 3628,
+      "gt_512_fraction": 0.4501799230673781,
+      "prefix_keyword_match_answers": 21,
+      "prefix_keyword_match_fraction": 0.0026057823551309096,
+      "prefix_keyword_occurrences": 38,
+      "matched_terms_examples": [
+        "Google",
+        "google",
+        "GEMINI",
+        "Gemini",
+        "OpenAI",
+        "gpt-4",
+        "gpt-3.5-turbo",
+        "GPT-4-Turbo",
+        "Claude"
+      ]
+    },
+    {
+      "LLM_name": "DeepSeek",
+      "n_answers": 8059,
+      "gt_512_tokens": 3178,
+      "gt_512_fraction": 0.3943417297431443,
+      "prefix_keyword_match_answers": 32,
+      "prefix_keyword_match_fraction": 0.003970715969723291,
+      "prefix_keyword_occurrences": 70,
+      "matched_terms_examples": [
+        "Claude",
+        "OpenAI",
+        "Google",
+        "google",
+        "GPT-4-Turbo",
+        "GPT-4",
+        "GPT"
+      ]
+    },
+    {
+      "LLM_name": "GPT",
+      "n_answers": 8059,
+      "gt_512_tokens": 2070,
+      "gt_512_fraction": 0.25685568929147534,
+      "prefix_keyword_match_answers": 27,
+      "prefix_keyword_match_fraction": 0.0033502915994540264,
+      "prefix_keyword_occurrences": 54,
+      "matched_terms_examples": [
+        "gpt-4o",
+        "OpenAI",
+        "Google",
+        "ChatGPT",
+        "anthropic",
+        "Claude",
+        "Gemini",
+        "GPT"
+      ]
+    },
+    {
+      "LLM_name": "Claude",
+      "n_answers": 8059,
+      "gt_512_tokens": 1947,
+      "gt_512_fraction": 0.24159324978285146,
+      "prefix_keyword_match_answers": 62,
+      "prefix_keyword_match_fraction": 0.0076932621913388755,
+      "prefix_keyword_occurrences": 96,
+      "matched_terms_examples": [
+        "Google",
+        "gpt-4",
+        "openai",
+        "google",
+        "OpenAI",
+        "GPT-4-Turbo",
+        "GPT-4",
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "Anthropic",
+        "GPT"
+      ]
+    }
+  ],
+  "ttr_paired_train_prompts": 3622,
+  "ttr_denominator_diagnostics": [
+    {
+      "LLM_name": "Claude",
+      "n_answers": 3622,
+      "min_denominator": 66,
+      "mean_denominator": 116.56129210381005,
+      "below_128_fraction": 0.9202098288238543
+    },
+    {
+      "LLM_name": "DeepSeek",
+      "n_answers": 3622,
+      "min_denominator": 70,
+      "mean_denominator": 115.13611264494754,
+      "below_128_fraction": 0.8776918829376036
+    },
+    {
+      "LLM_name": "GPT",
+      "n_answers": 3622,
+      "min_denominator": 58,
+      "mean_denominator": 108.72998343456653,
+      "below_128_fraction": 0.951131971286582
+    },
+    {
+      "LLM_name": "Gemini",
+      "n_answers": 3622,
+      "min_denominator": 75,
+      "mean_denominator": 118.84152401987852,
+      "below_128_fraction": 0.8500828271673109
+    },
+    {
+      "LLM_name": "Qwen",
+      "n_answers": 3622,
+      "min_denominator": 66,
+      "mean_denominator": 116.08752070679182,
+      "below_128_fraction": 0.8401435670900055
+    }
+  ]
+}

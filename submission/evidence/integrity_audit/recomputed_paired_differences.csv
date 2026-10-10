@@ -1,0 +1,12 @@
+run_id,reference,n_test,accuracy_delta,macro_f1_delta
+main_cnn_input_and_output_s42,runs/main_cnn_output_only_s42,8635,-0.0013896931094382614,-0.0014013638659784444
+main_cnn_input_and_output_s43,runs/main_cnn_output_only_s43,8635,-0.0061378112333526635,-0.005957980614666791
+main_cnn_input_and_output_s44,runs/main_cnn_output_only_s44,8635,0.0011580775911985697,0.0017305517285571836
+main_bilstm_input_and_output_s42,runs/main_bilstm_output_only_s42,8635,-0.010075275043427867,-0.01031510858945961
+main_bilstm_input_and_output_s43,runs/main_bilstm_output_only_s43,8635,-0.007295888824551233,-0.007667327426688297
+main_bilstm_input_and_output_s44,runs/main_bilstm_output_only_s44,8635,-0.009612044006948484,-0.010063285157217328
+rq3_coding_heldout_s42,runs/rq3_coding_mixed_s42,990,-0.2989898989898989,-0.3582091589328904
+rq3_factual_qa_heldout_s42,runs/rq3_factual_qa_mixed_s42,3235,-0.37928902627511596,-0.3980614844162482
+rq4_no_format_s42,runs/main_cnn_output_only_s42,8635,-0.03763752171395485,-0.03689852586709996
+rq4_keyword_mask_s42,runs/main_cnn_output_only_s42,8635,0.0030110017371164366,0.0034460826410320777
+rq4_fixed_length_s42,runs/rq4_length_raw_s42,3520,-0.00909090909090915,-0.009129843905166801

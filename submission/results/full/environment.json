@@ -1,0 +1,12 @@
+{
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "torch": "2.14.1+cpu",
+  "numpy": "2.5.3",
+  "pandas": "2.3.3",
+  "sklearn": "1.9.1",
+  "matplotlib": "3.11.2",
+  "cuda_available": false,
+  "cuda_device": null,
+  "data_directory": "./prepared"
+}

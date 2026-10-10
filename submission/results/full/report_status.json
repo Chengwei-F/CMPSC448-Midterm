@@ -1,0 +1,25 @@
+{
+  "profile": "full",
+  "smoke_only": false,
+  "completed_runs": 23,
+  "research_questions": [
+    {
+      "research_question": "RQ1",
+      "status": "Complete condition coverage: 2/2; completed seed counts shown below"
+    },
+    {
+      "research_question": "RQ2",
+      "status": "Complete condition coverage: 6/6; completed seed counts shown below"
+    },
+    {
+      "research_question": "RQ3",
+      "status": "results available"
+    },
+    {
+      "research_question": "RQ4",
+      "status": "results available"
+    }
+  ],
+  "has_student_placeholders": true,
+  "report_status": "partial_or_draft_not_a_final_submission"
+}

@@ -1,0 +1,33 @@
+{
+  "features": [
+    "word_count",
+    "char_count",
+    "mean_word_chars",
+    "mean_sentence_words",
+    "paragraph_count",
+    "heading_line_rate",
+    "list_line_rate",
+    "code_fence_count",
+    "question_marks_per_1000_chars",
+    "exclamations_per_1000_chars",
+    "digit_char_rate",
+    "punctuation_char_rate",
+    "ttr_128_words"
+  ],
+  "label_order": [
+    "GPT",
+    "Claude",
+    "Gemini",
+    "Qwen",
+    "DeepSeek"
+  ],
+  "C": 1.0,
+  "solver": "lbfgs",
+  "max_iter": 3000,
+  "preprocessing_fit": "training split only",
+  "missing_ttr": "training-median imputation plus missingness indicator",
+  "information_scope": "All predictive features use the same original output prefix available to the neural baseline; separate full-response training descriptions are not classifier inputs.",
+  "output_max_tokens": 512,
+  "selection": "fixed a priori; validation scores reported without selecting C",
+  "causal_interpretation": false
+}

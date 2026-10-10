@@ -1,0 +1,33 @@
+Formal results integrity audit
+{
+  "expected_runs": 23,
+  "indexed_runs": 23,
+  "checked_runs": 23,
+  "passed_checks": 574,
+  "total_checks": 574,
+  "blocking_failure_count": 0,
+  "caution_count": 0,
+  "all_saved_metric_values_reproduced": true,
+  "bootstrap_intervals_reproduced": 33
+}
+
+Blocking findings:
+
+Cautions:
+
+Limitations:
+- The audit recomputes statistics from saved predictions; it does not replay model inference or retrain models.
+- Hashes and internally consistent records establish agreement of supplied artifacts, not independent attestation of training execution.
+- Lexical/exact grouping checks do not rule out semantic paraphrases, translations, or pretraining contamination.
+- RQ3 and RQ4 have one training seed each; paired group intervals condition on fitted models and exclude training-seed uncertainty.
+- Input-only has one seed per architecture; exact 20% accuracy is a property of complete deterministic five-way pairing.
+- The length experiment conditions on K=256 eligibility; it cannot be generalized directly to excluded short responses.
+- The original automatically generated HTML remains a report scaffold with STUDENT placeholders; it is not a final submission.
+- Saved checkpoints were not deserialized in this audit.
+
+Bootstrap supplement:
+{
+  "recomputed": 33,
+  "passed": 33,
+  "failures": []
+}

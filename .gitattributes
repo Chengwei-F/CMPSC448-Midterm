@@ -1,2 +1,3 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Preserve delivered source and result bytes across Windows/Linux checkouts.
+# This avoids line-ending conversion changing recorded file checksums.
+* -text
